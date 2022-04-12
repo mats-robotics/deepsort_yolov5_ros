@@ -1,9 +1,9 @@
-# YOLO + SORT/DEEP SORT for ROS (not maintained anymore)
-Tracker ROS node (sort and deep sort) using darknet_ros (YOLOv3).
+# YOLO + SORT/DEEP SORT for ROS
+Tracker ROS node (sort and deep sort) using yolov5_ros (YOLOv5).
 Detected bounding boxes from YOLO are used by the sort tracker.  
-This has been done using ROS Kinetic, python2 and OpenCV2. If you need a modern ros wrapper for SORT, you should use newer versions of ROS, OpenCV and python.
-### Help needed
-The branch ```ros-noetic``` is a tentative to make it compatible with Python3, ROS Noetic and OpenCV4
+Target: Ubuntu 20.04 and ROS Noetic
+
+The documetation below will be updated soon!
 
 
 ## Docker installation
@@ -57,6 +57,32 @@ To run:
 IMPORTANT!! Before running the tracker nodes, you have to make the python scripts executable.
 For SORT, go to catkin_workspace/src/sort-deepsort-yolov3-ROS/sort_track/src and make track.py executable.
 For DEEP SORT, go to the same folder and make track_deep.py executable.
+46
+    
+47
+- DEEP SORT
+48
+​
+49
+​
+50
+Before running go to catkin_workspace/src/sort_track/src and open track_deep.py
+51
+In line 90, modify model_filename to your directory
+52
+To run:
+53
+​
+54
+    roslaunch sort_track sort_deep.launch
+55
+IMPORTANT!! Before running the tracker nodes, you have to make the python scripts executable.
+56
+For SORT, go to catkin_workspace/src/sort-deepsort-yolov3-ROS/sort_track/src and make track.py executable.
+57
+For DEEP SORT, go to the same folder and make track_deep.py executable.
+58
+
 
 ## Disclaimer
 
